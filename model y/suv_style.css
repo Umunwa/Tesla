@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: universal-sans, sans-serif;
+}
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  background-color: #eddcb0;
+  margin: 0;
+  padding: 0;
+  font: 14px universal-sans, sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #e2e3e3;
+  background-color: black;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 7px 12px;
+  margin-left: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tm {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0;
+  animation: fade 20s infinite;
+}
+.get_a_trade {
+  animation-delay: 0s;
+}
+.learn_more {
+  animation-delay: 10s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
