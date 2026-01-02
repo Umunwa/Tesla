@@ -98,6 +98,16 @@ button {
     background: gray;
   }
 }
+.m-standard {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 .slider {
   margin-top: 42px;
   width: 100%;
@@ -143,22 +153,54 @@ button {
 img {
   width: 100%;
   height: 100%;
-  align-items: baseline;
+  align-items: center;
   box-sizing: content-box;
 }
 .logo-container {
   position: absolute;
-  top: 10%;
+  top: 6%;
   left: 2%;
 }
 @font-face {
-  font-family: "TESLA";
-  src: url(..TESLA.ttf);
+  font-family: TESLA;
+  src: url(../TESLA.ttf);
 }
 .logo {
-  font-family: "TESLA", sans-serif;
-  font-size: 30px;
-  color: black;
+  font-family: TESLA, sans-serif;
+  color: #ffffff;
+  font-weight: lighter;
+}
+
+.order-container {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  top: 40%;
+  left: 50%;
+}
+.order {
+  background-color: #3d6ae1;
+  color: white;
+  text-wrap: nowrap;
+  text-align: center;
+  border: none;
+  box-sizing: border-box;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 20px 70px;
+  border-radius: 2px;
+  cursor: grab;
+}
+.compare {
+  background-color: white;
+  color: #000;
+  text-wrap: nowrap;
+  text-align: center;
+  padding: 20px 70px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  cursor: grab;
 }
 .btn-slide {
   position: absolute;
