@@ -8,7 +8,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 8%;
+  height: 50px;
+  overflow: hidden;
+  z-index: 10;
   background-color: #eddcb0;
   margin: 0;
   padding: 0;
@@ -37,15 +39,17 @@ a {
   transform: translateX(-50%);
   padding-top: 10px;
   white-space: nowrap;
-  text-overflow: ellipsis;
   opacity: 0;
-  animation: fade 20s infinite;
+  animation: fade 21s infinite;
 }
 .get_a_trade {
   animation-delay: 0s;
 }
 .learn_more {
-  animation-delay: 10s;
+  animation-delay: 7s;
+}
+.inventory {
+  animation-delay: 14s;
 }
 @keyframes fade {
   0% {
@@ -64,9 +68,9 @@ a {
     opacity: 0;
   }
 }
-button {
-  width: 12px;
-  height: 12px;
+.btn {
+  width: 10px;
+  height: 10px;
   background-color: black;
   border: none;
   border-radius: 50%;
@@ -74,21 +78,25 @@ button {
 }
 .btn_container {
   position: absolute;
-  top: 35%;
+  top: 40%;
   right: 2%;
   display: flex;
   gap: 5px;
 }
-.btn_1,
-.btn_active {
+.active_1,
+.active_2,
+.active_3 {
   background-color: black;
   animation: change 20s infinite alternate;
 }
-.btn_1 {
+.active_1 {
   animation-delay: 0s;
 }
-.btn_active {
+.active_2 {
   animation-delay: 3s;
+}
+.active_3 {
+  animation-delay: 6s;
 }
 @keyframes change {
   from {
@@ -110,18 +118,22 @@ button {
 }
 
 .slider {
-  margin-top: 42px;
+  position: absolute;
+  margin-top: 50px;
   width: 100%;
-  height: 100%;       
+  height: 100%;
+  overflow: hidden;
   align-items: center;
 }
 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
-  transform: translateX(-50% 50%);
+  left: 50%;
+  overflow: hidden;
+  transform: translateX(-50%);
   opacity: 0;
-  animation: view 20s linear infinite alternate;
+  animation: view 20s infinite alternate;
 }
 .img-1 {
   animation-delay: 0s;
@@ -155,11 +167,11 @@ img {
   width: 100%;
   height: 100%;
   align-items: center;
-  box-sizing: content-box;
+  object-fit: cover;
 }
 .logo-container {
   position: absolute;
-  top: 6%;
+  top: 4%;
   left: 2%;
 }
 @font-face {
@@ -178,7 +190,7 @@ img {
   height: 100%;
   display: flex;
   gap: 20px;
-  top: 40%;
+  top: 30%;
   left: 30%;
 }
 .order {
@@ -188,37 +200,71 @@ img {
   text-wrap: nowrap;
   text-align: center;
   border: none;
-  width: 70px;
+  width: 95px;
+  height: 20px;
   box-sizing: content-box;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  padding: 13px 70px;
+  padding: 13px 50px;
   margin-left: 0;
-  border-radius: 2px;
+  border-radius: 5px;
   cursor: grab;
 }
 .compare {
   background-color: white;
   color: #000;
-  width: 80px;
+  width: 95px;
+  height: 20px;
   font-size: 14px;
   text-wrap: nowrap;
   text-align: center;
-  padding: 13px 70px;
+  padding: 13px 50px;
+  margin-left: 0;
   border: none;
   box-sizing: content-box;
   border-radius: 5px;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   cursor: grab;
 }
 .btn-slide {
   position: absolute;
   display: flex;
   z-index: 3;
-  gap: 30px;
+  gap: 10px;
   top: 95%;
   left: 50%;
 }
+.butt {
+  width: 13px;
+  height: 13px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
+.btn-1,
+.btn-2,
+.btn-3 {
+  background-color: #ffffff;
+  animation: swipe 20s infinite alternate;
+}
+@keyframes swipe {
+  from {
+    background: #ffffff;
+  }
+  to {
+    background: gray;
+  }
+}
+
+.btn-1 {
+  animation-delay: 0s;
+}
+.btn-2 {
+  animation-delay: 10s;
+}
+.btn-3 {
+  animation-delay: 20s;
+}
 .btn-1:hover {
   background-color: gray;
 }
