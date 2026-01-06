@@ -241,11 +241,14 @@ img {
   cursor: pointer;
 }
 
-.btn-1,
-.btn-2,
+.btn-1 {
+  background: url('./media/m1.avif') 
+}
+.btn-2 {
+  background: url('./media/m2.avif')
+}
 .btn-3 {
-  background-color: #ffffff;
-  animation: swipe 20s infinite alternate;
+  background: url('./media/m3.avif')
 }
 @keyframes swipe {
   from {
